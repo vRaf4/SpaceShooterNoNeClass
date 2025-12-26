@@ -1,4 +1,7 @@
 vel_player = 2;//Velocidade do player;
+
+espera_tiro = 8;
+timer_tiro = 0;
 //Sistema de movimentação do player:
 //Criando o método:
 controla_player = function (){
@@ -11,11 +14,6 @@ controla_player = function (){
 	_esq = keyboard_check(ord("A")) or keyboard_check(vk_left); //Para esquerda;
 	_dire = keyboard_check(ord("D")) or keyboard_check(vk_right); //Para direita;
 	_atirar = keyboard_check(vk_space) or mouse_check_button(mb_left); //Para atirar;
-	//Definindo um valor padrão para a velocidade:
-	//para ele parar de se mover quando não estiver pressionando a tecla;
-	//vspeed = 0;
-	//hspeed = 0;
-	
 	//Outra forma de fazer a movimentação:
 	//Velocidade horizontal:
 	// 1 - 0 = 1 * vel_player = 2;
@@ -29,6 +27,24 @@ controla_player = function (){
 	//x e y vão receber a velocidade:
 	x += _velh;
 	y += _velv;	
+	
+	//Diminuindo o timer do tiro:
+	timer_tiro--;//A cada step, diminui 1; Então ele vai atirar em 8 a 8 frames;
+	
+	//Desafio: Fazer o tiro sair quando apertar a tecla do tiro:
+	//Ele vai cirar o tiro na sua posição;
+	if(_atirar and timer_tiro <= 0) {
+		//Salvando a instância do tiro criado:
+		var _tiro = instance_create_layer(x, y, "Tiro", obj_tiro_player);
+		//Vai estar salvo nessa variável;
+		_tiro.direction = 90;//Direção = 90 graus;
+		_tiro.speed = 10;
+		_tiro.image_xscale = 2;
+		_tiro.image_yscale = 2;
+		//Avisando que o timer do tiro foi resetado;
+		timer_tiro = espera_tiro;//Quando chegar a 0, ele vai receber de novo o tempo de espera; 
+		//E vai voltar a diminuir novamente;
+	}
 	//keyboard retorna um valor booleano;
 //	if (_cima) { //Então se _cima for true(se ele clicou no W):
 //		vspeed = -vel_player;//Ele sobe;
