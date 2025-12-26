@@ -45,15 +45,22 @@ controla_player = function (){
 		timer_tiro = espera_tiro;//Quando chegar a 0, ele vai receber de novo o tempo de espera; 
 		//E vai voltar a diminuir novamente;
 	}
-	//keyboard retorna um valor booleano;
-//	if (_cima) { //Então se _cima for true(se ele clicou no W):
-//		vspeed = -vel_player;//Ele sobe;
-//	}
-//	if(_baixo) vspeed = vel_player;//Ele desce;
-//	if(_esq) hspeed = -vel_player;//Vai para esquerda
-//	if(_dire) hspeed = vel_player;//Vai para direita;
-//	if(_atirar) show_debug_message("Atirou")
-//}
+	
+	//Atividade: Impedir que o player saia da tela:
+	//if (x <= 15) {
+	//	x = 15;
+	//} else if (x >= 272) {
+	//	x = 272;
+	//}
+	//if (y <= 15) {
+	//	y = 15;
+	//} else if (y >= 500) {
+	//	y = 500;
+	//}
+	//Outra maneira usando o clamp:
+	y = clamp(y, 15, room_height - 15);
+	x = clamp(x, 15, room_width - 15);
+	//A função clamp limita a posição do y ou x;
 
 // Funções vs Métodos em GML
 // -------------------------
