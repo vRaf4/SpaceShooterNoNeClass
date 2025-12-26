@@ -34,34 +34,47 @@ controla_player = function (){
 	//Desafio: Fazer o tiro sair quando apertar a tecla do tiro:
 	//Ele vai cirar o tiro na sua posição;
 	if(_atirar and timer_tiro <= 0) {
-		//Salvando a instância do tiro criado:
+		//Executando o método do tiro:
+		_tiro_2();
+		//Avisando que o timer do tiro foi resetado;
+		timer_tiro = espera_tiro;//Quando chegar a 0, ele vai receber de novo o tempo de espera; 
+		//E vai voltar a diminuir novamente;
+	}
+	//Limitando o player para não sair da tela::
+	y = clamp(y, 15, room_height - 15);
+	x = clamp(x, 15, room_width - 15);
+	//A função clamp limita a posição do y ou x;
+
+
+}
+//Criando o método do tiro:
+_tiro_1 = function (){
+	//Salvando a instância do tiro criado:
 		var _tiro = instance_create_layer(x, y, "Tiro", obj_tiro_player);
 		//Vai estar salvo nessa variável;
 		_tiro.direction = 90;//Direção = 90 graus;
 		_tiro.speed = 10;
 		_tiro.image_xscale = 2;
 		_tiro.image_yscale = 2;
-		//Avisando que o timer do tiro foi resetado;
-		timer_tiro = espera_tiro;//Quando chegar a 0, ele vai receber de novo o tempo de espera; 
-		//E vai voltar a diminuir novamente;
-	}
-	
-	//Atividade: Impedir que o player saia da tela:
-	//if (x <= 15) {
-	//	x = 15;
-	//} else if (x >= 272) {
-	//	x = 272;
-	//}
-	//if (y <= 15) {
-	//	y = 15;
-	//} else if (y >= 500) {
-	//	y = 500;
-	//}
-	//Outra maneira usando o clamp:
-	y = clamp(y, 15, room_height - 15);
-	x = clamp(x, 15, room_width - 15);
-	//A função clamp limita a posição do y ou x;
-
+}
+//Atividade: Criar o tiro 2:
+//Tiro 2:
+_tiro_2 = function () {
+		//Salvando a instância do tiro criado:
+		var _tiro = instance_create_layer(x - 10, y, "Tiro", obj_tiro_player);
+		
+		//Vai estar salvo nessa variável;
+		_tiro.direction = 90;//Direção = 90 graus;
+		_tiro.speed = 10;
+		_tiro.image_xscale = 2;
+		_tiro.image_yscale = 2;
+		
+		_tiro = instance_create_layer(x + 10, y, "Tiro", obj_tiro_player);
+		_tiro.vspeed = -10;
+		_tiro.image_xscale = 2;
+		_tiro.image_yscale = 2;
+		
+}
 // Funções vs Métodos em GML
 // -------------------------
 // Funções:
@@ -77,4 +90,3 @@ controla_player = function (){
 // Resumindo:
 // Use funções para código compartilhado entre vários objetos.
 // Use métodos para encapsular ações ligadas a um objeto específico.
-}
