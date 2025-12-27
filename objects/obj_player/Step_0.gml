@@ -9,4 +9,8 @@ controla_player();
 //Desenhar o level do tiro na tela;
 
 //Executando o método para trocar o level do tiro:
-_trocar_level_tiro();
+//_trocar_level_tiro();
+
+//Atividade: Criar o objeto do level, e do power up do level do tiro;
+//Fazer ele aparecer no level;
+//Subir o level do tiro quando colidir com o power up;

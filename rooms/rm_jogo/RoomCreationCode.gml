@@ -1,0 +1,2 @@
+//Gerando números aleatórios:
+randomise();
