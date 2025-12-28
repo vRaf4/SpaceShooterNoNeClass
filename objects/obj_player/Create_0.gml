@@ -99,6 +99,12 @@ _tiro_3 = function () {
 	_tiro_1();
 	_tiro_2()
 }
+//Método para ganhar level ao colidir com o powerUp:
+_ganhar_level_tiro = function () {
+	if(level_tiro < 3) {
+		level_tiro+= 1;
+	}
+}
 //Método para trocar o level do tiro:
 _trocar_level_tiro = function() {
 	//Se ele apertar shift:
