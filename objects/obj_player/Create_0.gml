@@ -5,6 +5,9 @@ espera_tiro = 8;
 timer_tiro = 0;
 
 level_tiro = 1;
+
+vidas = 5;
+escudos = 3;
 #endregion
 
 #region Métodos
@@ -119,6 +122,16 @@ _trocar_level_tiro = function() {
 			//Ele diminui até no 1;
 			level_tiro--;
 		}
+	}
+}
+//Atividade: Criar o método para desenhar a GUI para passar a sprite que vai ser desenhada, como parametro:
+_desenhar_GUI = function(_sprite, _valores, _posicao_y) {
+	var _posicao_x = 20;//Guardando a posição do x
+	//Vai repetir X vezes:
+	repeat(_valores) {
+		//Desenhando 3 vezes a sprite:
+		draw_sprite_ext(_sprite, 0, _posicao_x, _posicao_y, 1, 1, 0, c_white, 0.5);
+		_posicao_x += 25;//Aumentando a posição do x
 	}
 }
 
