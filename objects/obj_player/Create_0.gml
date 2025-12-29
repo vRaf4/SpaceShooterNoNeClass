@@ -80,9 +80,9 @@ controla_player = function (){
 
 }
 //Criando o método do tiro:
-_tiro_1 = function (){
+_tiro_1 = function (_obj_tiro = obj_tiro_player){
 	//Salvando a instância do tiro criado:
-		var _tiro = instance_create_layer(x, y, "Tiro", obj_tiro_player);
+		var _tiro = instance_create_layer(self.x, self.y, "Tiro", _obj_tiro);
 		//Vai estar salvo nessa variável;
 		_tiro.direction = 90;//Direção = 90 graus;
 		_tiro.speed = 10;

@@ -1,0 +1,5 @@
+//Executa o método do tiro quando o alarme tocar;
+_tiro_inimigo1();
+
+//Repete o alarme:
+alarm[0] = game_get_speed(gamespeed_fps) * 2;//2 segundos;
