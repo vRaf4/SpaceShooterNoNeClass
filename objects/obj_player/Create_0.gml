@@ -8,12 +8,23 @@ level_tiro = 1;
 
 vidas = 5;
 escudos = 3;
+
+meu_escudo = noone;
+
+tempo_invencivel = game_get_speed(gamespeed_fps);
+timer_i = 0;
+
+//Criar um timer de invencibilidade de 1 segundo;
+//O player só pode perder vida se ele não está invencivel;
+//Ele não está invencivel se o timer de invencibilidade for <= 0;
 #endregion
 
 #region Métodos
 //Sistema de movimentação do player:
 //Criando o método:
 controla_player = function (){
+	//Diminuindo o timer de invencibilidade:
+	timer_i--;
 	//Pegando as teclas:
 	var _cima, _baixo, _esq, _dire, _atirar;
 	//Pra cima, é a letra W ou Cima:
@@ -133,6 +144,41 @@ _desenhar_GUI = function(_sprite, _valores, _posicao_y) {
 		draw_sprite_ext(_sprite, 0, _posicao_x, _posicao_y, 1, 1, 0, c_white, 0.5);
 		_posicao_x += 25;//Aumentando a posição do x
 	}
+}
+
+//Atividade: Fazer o player perder 1 de vida quando apertar ENTER:
+//E se a vida chegar a 0, ele se destrói;
+
+_perder_vida = function() {
+	//Se ele tiver invencivel:
+	if (timer_i > 0) return;//Se ele tiver maior que 0, ele sai da função;
+	//Quando soltar a tecla enter:
+	if(keyboard_check_released(vk_enter)) {
+		//Se a vida for maior doque 0:
+		if(vidas > 0) {
+			//Diminui 1 de vida;
+			vidas--;
+			//Quando perder a vida, o tempo de invencibilidade aumenta:
+			timer_i = tempo_invencivel;
+		} else 
+			//A intância é destruida;
+			instance_destroy();
+		}
+}
+//Atividade: Fazer perder 1 de escudo quando apertar E;
+_usar_escudo = function() {
+	//Se tiver escudo e a variável meu escudo for noone:
+	if(escudos > 0 && meu_escudo == noone) {
+		//Quando soltar a tecla E:
+		if(keyboard_check_released(ord("E"))) {
+			//Perde 1 escudo;
+			escudos--;
+			meu_escudo = instance_create_layer(x, y, "Escudo", obj_escudo_anim);
+			meu_escudo.image_speed = 0.5;
+		} 
+	}
+	//Atividade: Quando terminar a animação do escudo, ele tem que 
+	//ficar parado na imagem final;
 }
 
 #endregion
