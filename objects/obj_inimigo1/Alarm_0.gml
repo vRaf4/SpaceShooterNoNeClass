@@ -2,4 +2,4 @@
 _tiro_inimigo1();
 
 //Repete o alarme:
-alarm[0] = game_get_speed(gamespeed_fps) * 2;//2 segundos;
+alarm[0] = game_get_speed(gamespeed_fps) * random_range(1,2);

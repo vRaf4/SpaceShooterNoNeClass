@@ -10,7 +10,7 @@ if (keyboard_check_released(vk_tab)) {
 _trocar_level_tiro();
 
 //Executando o método para perder vida:
-_perder_vida();
+//_perder_vida();
 //Executando o método para perder escudo:
 _usar_escudo();
 

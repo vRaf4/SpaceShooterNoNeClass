@@ -151,19 +151,17 @@ _desenhar_GUI = function(_sprite, _valores, _posicao_y) {
 
 _perder_vida = function() {
 	//Se ele tiver invencivel:
-	if (timer_i > 0) return;//Se ele tiver maior que 0, ele sai da função;
-	//Quando soltar a tecla enter:
-	if(keyboard_check_released(vk_enter)) {
-		//Se a vida for maior doque 0:
-		if(vidas > 0) {
-			//Diminui 1 de vida;
-			vidas--;
-			//Quando perder a vida, o tempo de invencibilidade aumenta:
-			timer_i = tempo_invencivel;
-		} else 
-			//A intância é destruida;
-			instance_destroy();
-		}
+	if (timer_i > 0 or instance_exists(meu_escudo)) return;//Se ele tiver maior que 0, ele sai da função;
+	//Se a vida for maior doque 0:
+	if(vidas > 1) {
+		//Diminui 1 de vida;
+		vidas--;
+		//Quando perder a vida, o tempo de invencibilidade aumenta:
+		timer_i = tempo_invencivel;
+	} else {
+		//A intância é destruida;
+		instance_destroy();
+	}
 }
 //Atividade: Fazer perder 1 de escudo quando apertar E;
 _usar_escudo = function() {

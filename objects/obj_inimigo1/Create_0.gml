@@ -2,8 +2,8 @@
 
 //Método de tiro: 
 _tiro_inimigo1 = function() {
-	var _tiro = instance_create_layer(x, y, "Inimigos", obj_tiro_inimigo1);
-	_tiro.vspeed = 6;
+	var _tiro = instance_create_layer(x, y, "Tiro", obj_tiro_inimigo1);
+	_tiro.vspeed = 4;
 	_tiro.image_xscale = 1.2;
 	_tiro.image_yscale = 1.2;
 }

@@ -1,7 +1,7 @@
 {
   "$GMSprite":"v2",
   "%Name":"spr_tiro_com_contorno",
-  "bboxMode":0,
+  "bboxMode":2,
   "bbox_bottom":17,
   "bbox_left":0,
   "bbox_right":7,
@@ -26,7 +26,7 @@
   ],
   "name":"spr_tiro_com_contorno",
   "nineSlice":null,
-  "origin":4,
+  "origin":9,
   "parent":{
     "name":"Player",
     "path":"folders/Sprites/Player.yy",
@@ -88,7 +88,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":4,
-    "yorigin":9,
+    "yorigin":3,
   },
   "swatchColours":null,
   "swfPrecision":0.5,
