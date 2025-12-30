@@ -55,6 +55,7 @@
     {"id":{"name":"rm_tutorial","path":"rooms/rm_tutorial/rm_tutorial.yy",},},
     {"id":{"name":"scr_funcoes","path":"scripts/scr_funcoes/scr_funcoes.yy",},},
     {"id":{"name":"scr_Globais","path":"scripts/scr_Globais/scr_Globais.yy",},},
+    {"id":{"name":"seq_onda1","path":"sequences/seq_onda1/seq_onda1.yy",},},
     {"id":{"name":"spr_Bg1_blur","path":"sprites/spr_Bg1_blur/spr_Bg1_blur.yy",},},
     {"id":{"name":"spr_Bg1_sem_blur","path":"sprites/spr_Bg1_sem_blur/spr_Bg1_sem_blur.yy",},},
     {"id":{"name":"spr_botao_sem_texto","path":"sprites/spr_botao_sem_texto/spr_botao_sem_texto.yy",},},

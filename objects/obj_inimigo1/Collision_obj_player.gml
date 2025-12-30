@@ -1,2 +1,2 @@
-//Criando o efeito:
-_efeito_explosao(obj_explosao_inimigo);
+//Morrendo: 
+_morte_inimigo();
