@@ -76,6 +76,8 @@ controla_player = function (){
 	y = clamp(y, 15, room_height - 15);
 	x = clamp(x, 15, room_width - 15);
 	//A função clamp limita a posição do y ou x;
+	
+	com_escudo();
 
 
 }
@@ -150,8 +152,9 @@ _desenhar_GUI = function(_sprite, _valores, _posicao_y) {
 //E se a vida chegar a 0, ele se destrói;
 
 _perder_vida = function() {
-	//Se ele tiver invencivel:
-	if (timer_i > 0 or instance_exists(meu_escudo)) return;//Se ele tiver maior que 0, ele sai da função;
+	//Se ele estiver maior que 0 e a instancia do escudo existir:
+	if (timer_i > 0 or instance_exists(meu_escudo)) return;
+	//Ele vai sair do código;
 	//Se a vida for maior doque 0:
 	if(vidas > 1) {
 		//Diminui 1 de vida;
@@ -162,6 +165,18 @@ _perder_vida = function() {
 		//A intância é destruida;
 		instance_destroy();
 	}
+}
+//Método para criar oescudo:
+com_escudo = function() { 
+	//Escudo seguir o player:
+	//Se a instancia existir:
+	if(instance_exists(meu_escudo)) {
+		//O x e o y do escudo, recebe o x e o y do player;
+		meu_escudo.x = x;
+		meu_escudo.y = y;
+		//timer_i = 10;//Fica invencivel;
+	}
+
 }
 //Atividade: Fazer perder 1 de escudo quando apertar E;
 _usar_escudo = function() {

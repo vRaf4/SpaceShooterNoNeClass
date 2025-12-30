@@ -14,13 +14,6 @@ _trocar_level_tiro();
 //Executando o método para perder escudo:
 _usar_escudo();
 
-//Escudo seguir o player:
-//Se a instancia existir:
-if(instance_exists(meu_escudo)) {
-	//O x e o y do escudo, recebe o x e o y do player;
-	meu_escudo.x = x;
-	meu_escudo.y = y;
-}
 
 //Atividade: Mudar o valor do level do tiro;
 //Se apertar para cima o level do tiro aumenta;
