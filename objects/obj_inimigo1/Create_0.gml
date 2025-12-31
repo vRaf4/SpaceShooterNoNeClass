@@ -1,4 +1,6 @@
 vida_inimigo = 3;
+//Descobrindo se ele foi criado na sequencia:
+criado_na_sequence = in_sequence;
 randomise();
 
 //Método de tiro: 
