@@ -28,7 +28,7 @@
   ],
   "name":"spr_tiro1_inimigo3",
   "nineSlice":null,
-  "origin":4,
+  "origin":7,
   "parent":{
     "name":"Inimigos",
     "path":"folders/Sprites/Inimigos.yy",
@@ -96,7 +96,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":5,
-    "yorigin":12,
+    "yorigin":24,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

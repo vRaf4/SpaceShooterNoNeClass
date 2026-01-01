@@ -7,6 +7,7 @@ estado = "chegando";
 
 tempo_load = 90;
 timer_load = 0;
+cont_tiro = 0;
 
 //Método para morrer e perder vida;
 _morrendo = function() {
@@ -27,7 +28,7 @@ _maquina_de_estado = function() {
 			if(y < 160) {
 				vspeed = 1.2;
 			} else {// Y não é menor que 160;
-				show_debug_message("Cheguei");
+				//show_debug_message("Cheguei");
 				//Troco o estado para cheguei;
 				estado = "carregando";
 			}				
@@ -36,14 +37,56 @@ _maquina_de_estado = function() {
 			vspeed = 0;
 			//Aumentando o valor do timer até chegar no tempo:
 			timer_load++;
-			//show_debug_message(timer_load);
 			if(timer_load >= tempo_load) {
-				//Quando o timer chegar no tempo ele muda o estado:
-				show_debug_message("Atirou");
-				estado = "Atirando";
+				//Quando o timer chegar no tempo ele atira;:
+				estado = choose("atirando", "atirando2");
+				cont_tiro++;
+				timer_load = 0;
 			}
-		break//parando o case;
-			
+			//Se ele atirar 3 vezes:
+			if(cont_tiro >= 5) {
+				estado = "fugindo";//Vai para o estado fugindo;
+			}
+			break
+		case "atirando" :
+			//Atividade: Fazer ele checar se o player existe:
+			if (instance_exists(obj_player)) {
+				//Ele vai dar uma direção com o x/y inicial, e vai até o x/y do objeto selecionado;
+				var _dir = point_direction(x, y, obj_player.x, obj_player.y);
+				//Ele cria o tiro:
+				var _tiro1 = instance_create_layer(x, y, "Tiro", obj_tiro1_inimigo3);
+				_tiro1.speed = 4;
+				_tiro1.direction = _dir;
+				_tiro1.image_angle = _dir + 90;//mais 90 graus;
+				//show_debug_message("Atirou");
+				//Volta a carregar:
+				estado = "carregando";
+			}
+			break	
+		case "atirando2" :
+			//Atividade: Fazer ele checar se o player existe:
+			if (instance_exists(obj_player)) {
+				var _ang = 255;
+				repeat(3) {
+					//Ele cria o tiro:
+					var _tiro2 = instance_create_layer(x, y, "Tiro", obj_tiro2_inimigo3);
+					_tiro2.speed = 2;
+					_tiro2.direction = _ang;
+					_tiro2.image_angle = _ang + 90;
+					//Aumenta o angulo:
+					_ang += 15;
+				}
+				//show_debug_message("Atirou");
+				//Atividade: vai para o estado de fugindo, quando o contador
+				//chegar em 3;
+				timer_load = 0;
+				//Volta a carregar:
+				estado = "carregando";
+			}
+			break	
+		case "fugindo": 
+			show_debug_message("Fugindo");
+			break;
 	}
 }
 
