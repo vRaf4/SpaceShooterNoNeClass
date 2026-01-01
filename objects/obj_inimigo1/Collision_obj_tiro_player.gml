@@ -4,4 +4,4 @@ if(vida_inimigo <= 0) {
 	_morte_inimigo();
 }
 
-show_debug_message(vida_inimigo)
+//show_debug_message(vida_inimigo)

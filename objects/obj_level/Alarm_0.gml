@@ -1,5 +1,11 @@
-//Criando um valor aleatório pro x e pro y:
-var _power_up_x = irandom_range(30, 254);
-var _power_up_y = irandom_range(90, 350);
+//Criando a sequencia:
+layer_sequence_create("seq_Inimigos", 0 ,0, _ondas[_indice]);
 
-instance_create_layer(_power_up_x, _power_up_y, "Level", obj_powerUp_tiro);
+//Se for menor que o tamanho o aray:
+if (_indice < array_length(_ondas) - 1) {
+	//Quando tocar o alarme ele aumentar o indice;
+	_indice++;
+	show_debug_message(_indice);
+	//Reiniciar o alarme e criar a próxima onda:
+	alarm[0] = 510;
+}
