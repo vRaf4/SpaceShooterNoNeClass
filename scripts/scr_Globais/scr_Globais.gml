@@ -1,5 +1,4 @@
 #region var Globais
-
 global.debug = false;
 
 #endregion
@@ -13,6 +12,23 @@ global.debug = false;
 		//359 graus;
 		//Destroi a instancia do tiro;
 		instance_destroy();	
+		
+		randomise();
+		//Chance de spawnar o power Up: 
+		var _chance = random(100);//Número de 0 a 100;
+		//Se a chance for maior que 90, ele spawna:
+		if(_chance >= 90) {	
+			//Criando o power up :
+			instance_create_layer(x, y, "Level", obj_powerUp_tiro);
+		}
 	}
+	
+	//Método de tiro: 
+	function _tiro_inimigo(_obj_tiro = obj_tiro_inimigo1) {
+	var _tiro = instance_create_layer(x, y, "Tiro", _obj_tiro);
+	_tiro.vspeed = 4;
+	_tiro.image_xscale = 1.2;
+	_tiro.image_yscale = 1.2;
+}
 
 #endregion
