@@ -8,4 +8,7 @@ if (_indice < array_length(_ondas) - 1) {
 	//show_debug_message(_indice);
 	//Reiniciar o alarme e criar a próxima onda:
 	alarm[0] = 510;
+} else {
+	_indice = 0;	
+	alarm[0] = 510;
 }

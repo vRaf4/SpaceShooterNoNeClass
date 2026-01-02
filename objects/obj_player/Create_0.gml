@@ -87,9 +87,9 @@ _tiro_1 = function (_obj_tiro = obj_tiro_player){
 		var _tiro = instance_create_layer(self.x, self.y, "Tiro", _obj_tiro);
 		//Vai estar salvo nessa variável;
 		_tiro.direction = 90;//Direção = 90 graus;
-		_tiro.speed = 10;
-		_tiro.image_xscale = 1.8;
-		_tiro.image_yscale = 1.8;
+		//_tiro.speed = 10;
+		//_tiro.image_xscale = 1.3;
+		//_tiro.image_yscale = 1.3;
 }
 //Atividade: Criar o tiro 2:
 //Tiro 2:
@@ -99,14 +99,14 @@ _tiro_2 = function () {
 		
 		//Vai estar salvo nessa variável;
 		_tiro.direction = 90;//Direção = 90 graus;
-		_tiro.speed = 10;
-		_tiro.image_xscale = 1.5;
-		_tiro.image_yscale = 1.5;
+		//_tiro.speed = 10;
+		//_tiro.image_xscale = 1.5;
+		//_tiro.image_yscale = 1.5;
 		
 		_tiro = instance_create_layer(x + 13, y, "Tiro", obj_tiro_player);
-		_tiro.vspeed = -10;
-		_tiro.image_xscale = 1.5;
-		_tiro.image_yscale = 1.5;
+		//_tiro.vspeed = -10;
+		//_tiro.image_xscale = 1.1;
+		//_tiro.image_yscale = 1.1;
 		
 }
 //Tiro 3:
