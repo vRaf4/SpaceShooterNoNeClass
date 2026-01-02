@@ -1,7 +1,7 @@
 //Overide: apaga o código do  objeto pai e vai poder reescrever um novo
 //código no objeto filho;
 
-vida = 10;
+vida = 8;
 //Variável para controlar o estado:
 estado = "chegando";
 
@@ -13,8 +13,10 @@ decidi_dire = false;
 //Método para morrer e perder vida;
 _morrendo = function() {
 	vida -= .4;
+	_screen_shake(5);
 	if(vida < 1) {
 		_efeito_explosao(obj_explosao_inimigo);
+		_screen_shake(10);
 	}
 }
 

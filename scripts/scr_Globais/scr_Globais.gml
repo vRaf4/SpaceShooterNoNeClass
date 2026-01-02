@@ -4,7 +4,7 @@ global.debug = false;
 #endregion
 
 #region funções 
-	
+	//Efeito de explosão:
 	function _efeito_explosao(_efeito = obj_explosao) {
 		//Criando o efeito de explosão:
 		var _explo = instance_create_layer(x, y, "Particulas", _efeito);
@@ -21,5 +21,28 @@ global.debug = false;
 	_tiro.image_xscale = 1.2;
 	_tiro.image_yscale = 1.2;
 }
+
+	//Efeito screen shake:
+	function _screen_shake(_tremor) {
+		//Se a instancia existir:
+		if(instance_exists(obj_screen_shake)) {
+			//Checando se o valor do treme atual é maior que o treme do objeto;
+			//Acessar o objeto:
+			with(obj_screen_shake) {
+				//Aqui meu código roda dentro do objeto;
+				//Se o treme novo for maior do que o eu estou tremendo(treme velho):
+				if(_tremor > treme) {
+					//Eu mudo o valor dele; Caso contrário, não faço nada;
+					treme = _tremor;
+				}
+			}
+			//o treme do objeto vai receber o parâmetro da função:
+			//obj_screen_shake.treme = _tremor;
+		}
+		else {
+			return;
+		}
+	}
+	
 
 #endregion

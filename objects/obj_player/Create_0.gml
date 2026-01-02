@@ -161,9 +161,13 @@ _perder_vida = function() {
 		vidas--;
 		//Quando perder a vida, o tempo de invencibilidade aumenta:
 		timer_i = tempo_invencivel;
+		//Tremer a tela quando levar dano:
+		//obj_screen_shake.treme = 20; Não é recomendado fazer assim, o certo seria fazer uma função;
+		_screen_shake(20);
 	} else {
 		//A intância é destruida;
 		instance_destroy();
+		_screen_shake(50);
 	}
 }
 //Método para criar oescudo:

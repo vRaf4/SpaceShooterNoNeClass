@@ -17,4 +17,4 @@ if(treme > 0.1) {
 	view_set_yport(view_current, 0);
 }
 //Parando de treme de pouquinho em pouquinho:
-treme = lerp(treme, 0, .06);
+treme = lerp(treme, 0, .1);

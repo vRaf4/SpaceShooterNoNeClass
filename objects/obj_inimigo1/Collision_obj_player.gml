@@ -1,2 +1,2 @@
 //Morrendo: 
-_morte_inimigo();
+_morrendo();
