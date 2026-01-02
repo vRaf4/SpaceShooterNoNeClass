@@ -8,6 +8,7 @@ estado = "chegando";
 tempo_load = 90;
 timer_load = 0;
 cont_tiro = 0;
+decidi_dire = false;
 
 //Método para morrer e perder vida;
 _morrendo = function() {
@@ -85,7 +86,16 @@ _maquina_de_estado = function() {
 			}
 			break	
 		case "fugindo": 
-			show_debug_message("Fugindo");
+			//Se ele não decidiu a direção:
+			if(decidi_dire == false) {
+				hspeed = choose(-1, 1);
+				decidi_dire = true;
+			}
+			vspeed = -1;
+			if(y < -32) {
+				instance_destroy();
+				show_debug_message("Destruiu");
+			}
 			break;
 	}
 }
