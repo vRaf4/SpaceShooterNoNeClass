@@ -61,6 +61,7 @@
     {"id":{"name":"seq_onda1","path":"sequences/seq_onda1/seq_onda1.yy",},},
     {"id":{"name":"seq_onda2_b","path":"sequences/seq_onda2_b/seq_onda2_b.yy",},},
     {"id":{"name":"seq_onda2","path":"sequences/seq_onda2/seq_onda2.yy",},},
+    {"id":{"name":"sh_branco","path":"shaders/sh_branco/sh_branco.yy",},},
     {"id":{"name":"spr_Bg1_blur","path":"sprites/spr_Bg1_blur/spr_Bg1_blur.yy",},},
     {"id":{"name":"spr_Bg1_sem_blur","path":"sprites/spr_Bg1_sem_blur/spr_Bg1_sem_blur.yy",},},
     {"id":{"name":"spr_botao_sem_texto","path":"sprites/spr_botao_sem_texto/spr_botao_sem_texto.yy",},},

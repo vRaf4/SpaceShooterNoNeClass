@@ -17,6 +17,9 @@ _usar_escudo();
 //Voltando a escala: 
 _efeito_voltar_a_mola(.2);
 
+
+if(tomei_dano > 0) tomei_dano--;
+
 //Atividade: Mudar o valor do level do tiro;
 //Se apertar para cima o level do tiro aumenta;
 //Se eu apertei para baixo o level do tiro diminui;

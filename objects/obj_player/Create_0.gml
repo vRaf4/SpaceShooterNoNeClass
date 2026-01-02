@@ -14,6 +14,8 @@ meu_escudo = noone;
 tempo_invencivel = game_get_speed(gamespeed_fps);
 timer_i = 0;
 
+tomei_dano = 0;//false;
+
 _inicia_efeito_mola()
 
 //Criar um timer de invencibilidade de 1 segundo;
@@ -158,6 +160,8 @@ _desenhar_GUI = function(_sprite, _valores, _posicao_y) {
 _perder_vida = function() {
 	//Se ele estiver maior que 0 e a instancia do escudo existir:
 	if (timer_i > 0 or instance_exists(meu_escudo)) return;
+	//Se tomar dano:
+	tomei_dano = 5;//Qualquer número positivo é true pro gml;
 	//Ele vai sair do código;
 	//Se a vida for maior doque 0:
 	if(vidas > 1) {
@@ -168,6 +172,7 @@ _perder_vida = function() {
 		//Tremer a tela quando levar dano:
 		//obj_screen_shake.treme = 20; Não é recomendado fazer assim, o certo seria fazer uma função;
 		_screen_shake(20);
+		_efeito_mola(1.5,1.3)
 	} else {
 		//A intância é destruida;
 		instance_destroy();
