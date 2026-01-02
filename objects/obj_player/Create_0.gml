@@ -14,6 +14,8 @@ meu_escudo = noone;
 tempo_invencivel = game_get_speed(gamespeed_fps);
 timer_i = 0;
 
+_inicia_efeito_mola()
+
 //Criar um timer de invencibilidade de 1 segundo;
 //O player só pode perder vida se ele não está invencivel;
 //Ele não está invencivel se o timer de invencibilidade for <= 0;
@@ -54,6 +56,8 @@ controla_player = function (){
 	//Desafio: Fazer o tiro sair quando apertar a tecla do tiro:
 	//Ele vai cirar o tiro na sua posição;
 	if(_atirar and timer_tiro <= 0) {
+		//Mudando a escala quando atirar:
+		_efeito_mola(1.3, 1.5);
 		//Executando o método do tiro:
 		if(level_tiro == 1) {//Se level for 1:
 			//Vai executar o tiro 1;

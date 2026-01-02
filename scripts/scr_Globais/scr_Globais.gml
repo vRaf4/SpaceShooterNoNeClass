@@ -44,5 +44,20 @@ global.debug = false;
 		}
 	}
 	
+	function _inicia_efeito_mola(){
+		xscale = 1;
+		yscale = 1;
+	}
+	function _efeito_mola(_xscale, _yscale) {
+		yscale = _yscale;
+		xscale = _xscale;
+	}
+	function _efeito_voltar_a_mola(_qtd){
+		yscale = lerp(yscale, 1, _qtd);
+		xscale = lerp(xscale, 1, _qtd);
+	}
+	function _efeito_mola_desenhar(){
+		draw_sprite_ext(sprite_index, image_index, x, y, xscale, yscale, image_angle, image_blend, image_alpha);
+	}
 
 #endregion
