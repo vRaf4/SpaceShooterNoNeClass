@@ -92,6 +92,7 @@ _maquina_de_estado = function() {
 				decidi_dire = true;
 			}
 			vspeed = -1;
+			//Atividade: destruir quando sair da tela:
 			if(y < -32) {
 				instance_destroy();
 				show_debug_message("Destruiu");
