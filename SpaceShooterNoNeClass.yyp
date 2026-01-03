@@ -42,6 +42,7 @@
   "name":"SpaceShooterNoNeClass",
   "resources":[
     {"id":{"name":"obj_escudo_anim","path":"objects/obj_escudo_anim/obj_escudo_anim.yy",},},
+    {"id":{"name":"obj_explo_player","path":"objects/obj_explo_player/obj_explo_player.yy",},},
     {"id":{"name":"obj_explosao_inimigo","path":"objects/obj_explosao_inimigo/obj_explosao_inimigo.yy",},},
     {"id":{"name":"obj_explosao","path":"objects/obj_explosao/obj_explosao.yy",},},
     {"id":{"name":"obj_inimigo1","path":"objects/obj_inimigo1/obj_inimigo1.yy",},},
@@ -83,6 +84,7 @@
     {"id":{"name":"spr_camada4","path":"sprites/spr_camada4/spr_camada4.yy",},},
     {"id":{"name":"spr_escudo_anim","path":"sprites/spr_escudo_anim/spr_escudo_anim.yy",},},
     {"id":{"name":"spr_escudo","path":"sprites/spr_escudo/spr_escudo.yy",},},
+    {"id":{"name":"spr_explo_player","path":"sprites/spr_explo_player/spr_explo_player.yy",},},
     {"id":{"name":"spr_explosao_imimigo1","path":"sprites/spr_explosao_imimigo1/spr_explosao_imimigo1.yy",},},
     {"id":{"name":"spr_inimigo1","path":"sprites/spr_inimigo1/spr_inimigo1.yy",},},
     {"id":{"name":"spr_inimigo3","path":"sprites/spr_inimigo3/spr_inimigo3.yy",},},
