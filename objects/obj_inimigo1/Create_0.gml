@@ -13,5 +13,6 @@ _morrendo = function() {
 	if(vida_inimigo < 1) {
 		_efeito_explosao(obj_explosao_inimigo);
 		_screen_shake(10);
+		_toca_som_sfx(sfx_explosao2);
 	}		
 }

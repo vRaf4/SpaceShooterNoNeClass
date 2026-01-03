@@ -21,6 +21,7 @@ global.debug = false;
 	_tiro.image_xscale = 1.2;
 	_tiro.image_yscale = 1.2;
 	_efeito_mola(1.5, 1.3);
+	_toca_som_sfx(sfx_laser1);
 }
 
 	//Efeito screen shake:
@@ -82,6 +83,13 @@ global.debug = false;
 		} else {
 			_funcao_desenho();
 		}
+	}
+	
+	function _toca_som_sfx(_som,) {
+		//Parando o som para não criar varias instancias:
+		audio_stop_sound(_som);
+		var _pitch = random_range(.7, 1.2);
+		audio_play_sound(_som, 0, 0, , , _pitch);
 	}
 
 #endregion

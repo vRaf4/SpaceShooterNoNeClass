@@ -76,10 +76,6 @@ controla_player = function (){
 			_tiro_3();
 			timer_tiro = espera_tiro * 1.6;
 		}
-		//Avisando que o timer do tiro foi resetado;
-		//timer_tiro = espera_tiro;//Quando chegar a 0, ele vai receber de novo o tempo de espera; 
-		//E vai voltar a diminuir novamente;
-
 	}
 	//Limitando o player para não sair da tela::
 	y = clamp(y, 15, room_height - 15);
@@ -99,6 +95,8 @@ _tiro_1 = function (_obj_tiro = obj_tiro_player){
 		//_tiro.speed = 10;
 		//_tiro.image_xscale = 1.3;
 		//_tiro.image_yscale = 1.3;
+		//Som:
+		_toca_som_sfx(sfx_laser1);
 }
 //Atividade: Criar o tiro 2:
 //Tiro 2:
@@ -116,13 +114,16 @@ _tiro_2 = function () {
 		//_tiro.vspeed = -10;
 		//_tiro.image_xscale = 1.1;
 		//_tiro.image_yscale = 1.1;
-		
+		//som: 
+		_toca_som_sfx(sfx_laser2);
 }
 //Tiro 3:
 _tiro_3 = function () {
 	//O tiro 3 vai ser o 1 e o 2 juntos;
 	_tiro_1();
-	_tiro_2()
+	_tiro_2();	
+	_toca_som_sfx(sfx_laser2);
+	_toca_som_sfx(sfx_laser1);
 }
 //Método para ganhar level ao colidir com o powerUp:
 _ganhar_level_tiro = function () {
@@ -180,6 +181,8 @@ _perder_vida = function() {
 		//A intância é destruida;
 		instance_destroy();
 		_screen_shake(50);
+		_toca_som_sfx(sfx_explosion);
+		_toca_som_sfx(sfx_lose);//Som de perder;
 	}
 }
 //Método para criar oescudo:
@@ -204,6 +207,7 @@ _usar_escudo = function() {
 			escudos--;
 			meu_escudo = instance_create_layer(x, y, "Escudo", obj_escudo_anim);
 			meu_escudo.image_speed = 0.5;
+			_toca_som_sfx(sfx_shieldUp);
 		} 
 	}
 	//Atividade: Quando terminar a animação do escudo, ele tem que 

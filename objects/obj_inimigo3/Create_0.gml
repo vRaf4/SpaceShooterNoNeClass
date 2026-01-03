@@ -16,13 +16,14 @@ _inicia_efeito_shader();
 
 //Método para morrer e perder vida;
 _morrendo = function() {
-	vida -= .4;
+	vida -= .6;
 	_screen_shake(5);
 	_efeito_mola(1.5, 1.3);
 	_timer_efeito_shader(3);
 	if(vida < 1) {
 		_efeito_explosao(obj_explosao_inimigo);
 		_screen_shake(10);
+		_toca_som_sfx(sfx_explosao2);
 	}
 }
 
@@ -69,6 +70,7 @@ _maquina_de_estado = function() {
 				_tiro1.image_angle = _dir + 90;//mais 90 graus;
 				//show_debug_message("Atirou");
 				//Volta a carregar:
+				_toca_som_sfx(sfx_laser1);
 				_efeito_mola(1.3, 1.5);
 				estado = "carregando";
 			}
@@ -86,6 +88,7 @@ _maquina_de_estado = function() {
 					//Aumenta o angulo:
 					_ang += 15;
 				}
+				_toca_som_sfx(sfx_laser2);
 				_efeito_mola(1.3, 1.5);
 				//show_debug_message("Atirou");
 				//Atividade: vai para o estado de fugindo, quando o contador
