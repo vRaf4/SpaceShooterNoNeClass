@@ -16,6 +16,10 @@ timer_i = 0;
 
 _inicia_efeito_mola();
 _inicia_efeito_shader();
+//Parando todos os sons:
+audio_stop_all();
+//Iniciando a musica:
+audio_play_sound(musica_fundo, 0, 1);
 
 //Criar um timer de invencibilidade de 1 segundo;
 //O player só pode perder vida se ele não está invencivel;

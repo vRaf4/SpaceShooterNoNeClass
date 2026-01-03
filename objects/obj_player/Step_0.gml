@@ -19,6 +19,9 @@ _efeito_voltar_a_mola(.2);
 
 _contador_efeito_shader();
 
+//Reiniciando o jogo:
+if(keyboard_check(vk_backspace)) room_restart();
+
 
 //Atividade: Mudar o valor do level do tiro;
 //Se apertar para cima o level do tiro aumenta;
