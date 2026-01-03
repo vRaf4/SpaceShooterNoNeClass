@@ -20,6 +20,7 @@ global.debug = false;
 	_tiro.vspeed = 4;
 	_tiro.image_xscale = 1.2;
 	_tiro.image_yscale = 1.2;
+	_efeito_mola(1.5, 1.3);
 }
 
 	//Efeito screen shake:

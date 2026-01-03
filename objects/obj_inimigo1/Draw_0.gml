@@ -1,0 +1,1 @@
+_efeito_mola_desenhar()
