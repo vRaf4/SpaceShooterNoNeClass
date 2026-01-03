@@ -179,7 +179,8 @@ _perder_vida = function() {
 		_efeito_mola(1.5,1.3)
 	} else {
 		//A intância é destruida;
-		instance_destroy();
+		_efeito_explosao(obj_explo_player);
+		//instance_destroy();
 		_screen_shake(50);
 		_toca_som_sfx(sfx_explosion);
 		_toca_som_sfx(sfx_lose);//Som de perder;
