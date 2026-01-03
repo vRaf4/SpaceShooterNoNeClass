@@ -35,7 +35,7 @@
   ],
   "name":"spr_escudo_anim",
   "nineSlice":null,
-  "origin":4,
+  "origin":9,
   "parent":{
     "name":"Player",
     "path":"folders/Sprites/Player.yy",
@@ -124,7 +124,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":19,
-    "yorigin":29,
+    "yorigin":20,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

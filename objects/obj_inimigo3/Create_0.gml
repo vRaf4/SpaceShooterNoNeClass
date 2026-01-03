@@ -10,10 +10,16 @@ timer_load = 0;
 cont_tiro = 0;
 decidi_dire = false;
 
+//Efeitos: 
+_inicia_efeito_mola();
+_inicia_efeito_shader();
+
 //Método para morrer e perder vida;
 _morrendo = function() {
 	vida -= .4;
 	_screen_shake(5);
+	_efeito_mola(1.5, 1.3);
+	_timer_efeito_shader(3);
 	if(vida < 1) {
 		_efeito_explosao(obj_explosao_inimigo);
 		_screen_shake(10);
@@ -63,6 +69,7 @@ _maquina_de_estado = function() {
 				_tiro1.image_angle = _dir + 90;//mais 90 graus;
 				//show_debug_message("Atirou");
 				//Volta a carregar:
+				_efeito_mola(1.3, 1.5);
 				estado = "carregando";
 			}
 			break	
@@ -79,6 +86,7 @@ _maquina_de_estado = function() {
 					//Aumenta o angulo:
 					_ang += 15;
 				}
+				_efeito_mola(1.3, 1.5);
 				//show_debug_message("Atirou");
 				//Atividade: vai para o estado de fugindo, quando o contador
 				//chegar em 3;

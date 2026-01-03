@@ -59,5 +59,28 @@ global.debug = false;
 	function _efeito_mola_desenhar(){
 		draw_sprite_ext(sprite_index, image_index, x, y, xscale, yscale, image_angle, image_blend, image_alpha);
 	}
+	function _inicia_efeito_shader() {
+		tomei_dano = 0;//false;
+	}
+	function _timer_efeito_shader(_dano){
+		tomei_dano = _dano;//Qualquer número positivo é true pro gml;
+	}
+	function _contador_efeito_shader(){ 
+		if(tomei_dano > 0) tomei_dano--;
+	}
+	function _desenha_efeito_shader(_funcao_desenho = draw_self) {
+		//Se tomar dano: 
+		if(tomei_dano) {
+			//Iniciando efeito sombra: 
+			shader_set(sh_branco);
+			//Para não afetar a colisão quando aumentar a escala
+			//precisamos criar uma variável para ser a escala, e se desenhar dessa forma:
+			_funcao_desenho();
+			//Resetando o shader:
+			shader_reset();
+		} else {
+			_funcao_desenho();
+		}
+	}
 
 #endregion

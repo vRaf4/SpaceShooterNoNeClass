@@ -14,9 +14,8 @@ meu_escudo = noone;
 tempo_invencivel = game_get_speed(gamespeed_fps);
 timer_i = 0;
 
-tomei_dano = 0;//false;
-
-_inicia_efeito_mola()
+_inicia_efeito_mola();
+_inicia_efeito_shader();
 
 //Criar um timer de invencibilidade de 1 segundo;
 //O player só pode perder vida se ele não está invencivel;
@@ -161,7 +160,7 @@ _perder_vida = function() {
 	//Se ele estiver maior que 0 e a instancia do escudo existir:
 	if (timer_i > 0 or instance_exists(meu_escudo)) return;
 	//Se tomar dano:
-	tomei_dano = 5;//Qualquer número positivo é true pro gml;
+	_timer_efeito_shader(3);
 	//Ele vai sair do código;
 	//Se a vida for maior doque 0:
 	if(vidas > 1) {
