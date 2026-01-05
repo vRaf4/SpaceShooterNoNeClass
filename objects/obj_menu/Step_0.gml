@@ -1,1 +1,1 @@
-alternando_opcoes_menu();
+controlar_menu();

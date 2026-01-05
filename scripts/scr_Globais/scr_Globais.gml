@@ -1,5 +1,7 @@
 #region var Globais
 global.debug = false;
+global.destino = rm_inicio;
+global.transicao = false;
 
 #endregion
 
@@ -90,6 +92,19 @@ global.debug = false;
 		audio_stop_sound(_som);
 		var _pitch = random_range(.7, 1.2);
 		audio_play_sound(_som, 0, 0, , , _pitch);
+	}
+	
+	function _criar_transicao_1() {
+		layer_sequence_create("Transicao", room_width / 2, room_height / 2, seq_transicao_1);
+	}
+	function _criar_transicao_2() {
+		layer_sequence_create("Transicao", room_width / 2, room_height / 2, seq_transicao_2);
+	}
+	function _troca_room(){	
+		room_goto(global.destino);
+	}
+	function _fim_transicao(){
+		global.transicao = false;
 	}
 
 #endregion
