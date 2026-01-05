@@ -184,6 +184,8 @@ _perder_vida = function() {
 		_screen_shake(50);
 		_toca_som_sfx(sfx_explosion);
 		_toca_som_sfx(sfx_lose);//Som de perder;
+		_criar_transicao_1();
+		global.transicao = true;
 	}
 }
 //Método para criar oescudo:

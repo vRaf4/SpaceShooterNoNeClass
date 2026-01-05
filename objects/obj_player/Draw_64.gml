@@ -7,6 +7,9 @@ if(global.debug) {
 //Atividade: Desenhe a palavra vida, na base da janela:
 var _altura_tela = display_get_gui_height();//Pegando a altura da janela;
 
-//Desenhando a GUI:
-_desenhar_GUI(spr_vida, vidas, _altura_tela - 20);
-_desenhar_GUI(spr_escudo, escudos, _altura_tela - 45);
+//Se não tiver transição ele desenha:
+if(!global.transicao) {
+	//Desenhando a GUI:
+	_desenhar_GUI(spr_vida, vidas, _altura_tela - 20);
+	_desenhar_GUI(spr_escudo, escudos, _altura_tela - 45);
+}

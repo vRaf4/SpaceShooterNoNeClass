@@ -8,6 +8,8 @@ menu = ["JOGAR", "TUTORIAL", "SAIR"];
 menu_atual = 0;
 
 margem = 0;
+//Tocando a musica:
+_toca_som_sfx(snd_fundo_inicio);
 
 controlar_menu = function() {
 	var _subir = keyboard_check_pressed(vk_up);

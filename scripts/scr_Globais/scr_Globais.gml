@@ -102,6 +102,8 @@ global.transicao = false;
 	}
 	function _troca_room(){	
 		room_goto(global.destino);
+		//Parando todos os sons:
+		audio_stop_all();
 	}
 	function _fim_transicao(){
 		global.transicao = false;
