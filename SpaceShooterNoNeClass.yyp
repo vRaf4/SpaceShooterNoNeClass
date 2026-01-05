@@ -32,7 +32,9 @@
     {"$GMFolder":"","%Name":"Tile Sets","folderPath":"folders/Tile Sets.yy","name":"Tile Sets","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Timelines","folderPath":"folders/Timelines.yy","name":"Timelines","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
-  "ForcedPrefabProjectReferences":[],
+  "ForcedPrefabProjectReferences":[
+    {"link":"io.gamemaker.sdfshaders-1.0.0","name":"io.gamemaker.sdfshaders-1.0.0","path":"io.gamemaker.sdfshaders-1.0.0.yyp",},
+  ],
   "IncludedFiles":[],
   "isEcma":false,
   "LibraryEmitters":[],
@@ -41,6 +43,9 @@
   },
   "name":"SpaceShooterNoNeClass",
   "resources":[
+    {"id":{"name":"fnt_Menu_1","path":"fonts/fnt_Menu_1/fnt_Menu_1.yy",},},
+    {"id":{"name":"fnt_Menu_2","path":"fonts/fnt_Menu_2/fnt_Menu_2.yy",},},
+    {"id":{"name":"fnt_Menu_3","path":"fonts/fnt_Menu_3/fnt_Menu_3.yy",},},
     {"id":{"name":"obj_escudo_anim","path":"objects/obj_escudo_anim/obj_escudo_anim.yy",},},
     {"id":{"name":"obj_explo_player","path":"objects/obj_explo_player/obj_explo_player.yy",},},
     {"id":{"name":"obj_explosao_inimigo","path":"objects/obj_explosao_inimigo/obj_explosao_inimigo.yy",},},

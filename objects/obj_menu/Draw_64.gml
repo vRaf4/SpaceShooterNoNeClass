@@ -1,6 +1,7 @@
 //Atividade: Pegar a dimensão da tela
 //E desenhar no meio da tela;
-var vh = window_get_height() / 2;//Pega a metade da tela;
+var vh = window_get_height() / 2.5;//Pega a metade da tela;
+draw_set_font(fnt_Menu_1);
 
 //Centralizando o menu:
 draw_set_valign(fa_center);
@@ -21,8 +22,9 @@ for (var i = 0; i < array_length(menu); i++) {
 	}
 	draw_set_colour(_cor);
 	//Desenhando a opção de jogar na tela:
-	draw_text(20, vh + i * 20, menu[i]);
+	draw_text(20, vh + i * 45, menu[i]);
 	
 	draw_set_colour(-1);
 }
 draw_set_valign(-1);
+draw_set_font(-1);
