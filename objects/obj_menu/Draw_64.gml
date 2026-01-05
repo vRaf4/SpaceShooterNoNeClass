@@ -13,7 +13,16 @@ draw_set_valign(fa_center);
 
 //Enquanto i for menor que o tamanho do array:
 for (var i = 0; i < array_length(menu); i++) {
+	//Variável da cor:
+	var _cor = c_white;
+	//Se o i for igual a atual:
+	if(i == menu_atual) {
+		_cor = c_red;//Vai ficar vermelho;
+	}
+	draw_set_colour(_cor);
 	//Desenhando a opção de jogar na tela:
 	draw_text(20, vh + i * 20, menu[i]);
+	
+	draw_set_colour(-1);
 }
 draw_set_valign(-1);

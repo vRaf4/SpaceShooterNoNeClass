@@ -1,0 +1,1 @@
+alternando_opcoes_menu();
