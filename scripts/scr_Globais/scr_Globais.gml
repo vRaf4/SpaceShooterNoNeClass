@@ -17,13 +17,18 @@ global.transicao = false;
 	}
 	
 	//Método de tiro: 
-	function _tiro_inimigo(_obj_tiro = obj_tiro_inimigo1) {
-	var _tiro = instance_create_layer(x, y, "Tiro", _obj_tiro);
-	_tiro.vspeed = 4;
-	_tiro.image_xscale = 1.2;
-	_tiro.image_yscale = 1.2;
-	_efeito_mola(1.5, 1.3);
-	_toca_som_sfx(sfx_laser1);
+	function _tiro_inimigo(_obj_tiro = obj_tiro_inimigo1, _seguir = false) {
+		var _tiro = instance_create_layer(x, y, "Tiro", _obj_tiro);
+		_tiro.vspeed = 4;
+		_tiro.image_xscale = 1.8;
+		_tiro.image_yscale = 1.8;
+		if(_seguir == true) {
+			var _dir = point_direction(x, y, obj_player.x, obj_player.y);
+			_tiro.direction = _dir;
+			_tiro.image_angle = _dir + 90;
+		}
+		_efeito_mola(1.5, 1.3);
+		_toca_som_sfx(sfx_laser1);
 }
 
 	//Efeito screen shake:
