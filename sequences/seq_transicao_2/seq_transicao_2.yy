@@ -32,8 +32,8 @@
   },
   "name":"seq_transicao_2",
   "parent":{
-    "name":"Sequences",
-    "path":"folders/Sequences.yy",
+    "name":"Transicoes",
+    "path":"folders/Sequences/Transicoes.yy",
   },
   "playback":0,
   "playbackSpeed":60.0,

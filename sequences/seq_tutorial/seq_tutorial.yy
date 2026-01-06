@@ -26,8 +26,8 @@
   },
   "name":"seq_tutorial",
   "parent":{
-    "name":"Sequences",
-    "path":"folders/Sequences.yy",
+    "name":"Transicoes",
+    "path":"folders/Sequences/Transicoes.yy",
   },
   "playback":2,
   "playbackSpeed":60.0,

@@ -9,6 +9,16 @@ if (_indice < array_length(_ondas) - 1) {
 	//Reiniciar o alarme e criar a próxima onda:
 	alarm[0] = 510;
 } else {
-	_indice = 0;	
+	var _posX = 48;
+	var _posY = -48;	
+	//Vai criar dois inimigos 3;
+	repeat(2) {	
+		instance_create_layer(x + _posX, y + _posY, "Inimigos", obj_inimigo3);
+		_posX += 200;
+		_posY -= 50;
+	}
+	//Repete o alarme:
+	_indice = 0;
 	alarm[0] = 510;
+
 }

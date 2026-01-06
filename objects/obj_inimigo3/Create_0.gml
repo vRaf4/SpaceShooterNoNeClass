@@ -9,6 +9,7 @@ tempo_load = 90;
 timer_load = 0;
 cont_tiro = 0;
 decidi_dire = false;
+global.boss = true;
 
 //Efeitos: 
 _inicia_efeito_mola();

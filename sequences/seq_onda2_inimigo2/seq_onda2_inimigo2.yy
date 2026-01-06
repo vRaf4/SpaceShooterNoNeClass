@@ -26,8 +26,8 @@
   },
   "name":"seq_onda2_inimigo2",
   "parent":{
-    "name":"Sequences",
-    "path":"folders/Sequences.yy",
+    "name":"Wave2",
+    "path":"folders/Sequences/Wave2.yy",
   },
   "playback":0,
   "playbackSpeed":60.0,

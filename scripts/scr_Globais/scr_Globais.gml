@@ -2,6 +2,7 @@
 global.debug = false;
 global.destino = rm_inicio;
 global.transicao = false;
+global.boss = false;
 
 #endregion
 
@@ -22,11 +23,6 @@ global.transicao = false;
 		_tiro.vspeed = 4;
 		_tiro.image_xscale = 1.5;
 		_tiro.image_yscale = 1.5;
-		if(_seguir == true) {
-			var _dir = point_direction(x, y, obj_player.x, obj_player.y);
-			_tiro.direction = _dir;
-			_tiro.image_angle = _dir + 90;
-		}
 		_efeito_mola(1.5, 1.3);
 		_toca_som_sfx(sfx_laser1);
 }
