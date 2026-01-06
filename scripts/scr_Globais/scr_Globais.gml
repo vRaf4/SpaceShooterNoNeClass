@@ -20,8 +20,8 @@ global.transicao = false;
 	function _tiro_inimigo(_obj_tiro = obj_tiro_inimigo1, _seguir = false) {
 		var _tiro = instance_create_layer(x, y, "Tiro", _obj_tiro);
 		_tiro.vspeed = 4;
-		_tiro.image_xscale = 1.8;
-		_tiro.image_yscale = 1.8;
+		_tiro.image_xscale = 1.5;
+		_tiro.image_yscale = 1.5;
 		if(_seguir == true) {
 			var _dir = point_direction(x, y, obj_player.x, obj_player.y);
 			_tiro.direction = _dir;

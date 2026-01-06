@@ -75,6 +75,7 @@
     {"id":{"name":"seq_onda1_inimigo2","path":"sequences/seq_onda1_inimigo2/seq_onda1_inimigo2.yy",},},
     {"id":{"name":"seq_onda1","path":"sequences/seq_onda1/seq_onda1.yy",},},
     {"id":{"name":"seq_onda2_b","path":"sequences/seq_onda2_b/seq_onda2_b.yy",},},
+    {"id":{"name":"seq_onda2_inimigo2","path":"sequences/seq_onda2_inimigo2/seq_onda2_inimigo2.yy",},},
     {"id":{"name":"seq_onda2","path":"sequences/seq_onda2/seq_onda2.yy",},},
     {"id":{"name":"seq_transicao_1","path":"sequences/seq_transicao_1/seq_transicao_1.yy",},},
     {"id":{"name":"seq_transicao_2","path":"sequences/seq_transicao_2/seq_transicao_2.yy",},},
