@@ -9,7 +9,6 @@ tempo_load = 90;
 timer_load = 0;
 cont_tiro = 0;
 decidi_dire = false;
-global.boss = true;
 
 //Efeitos: 
 _inicia_efeito_mola();
@@ -25,6 +24,7 @@ _morrendo = function() {
 		_efeito_explosao(obj_explosao_inimigo);
 		_screen_shake(10);
 		_toca_som_sfx(sfx_explosao2);
+		global.pontos += 10;//Ganha 10 pontos quando inimigo 3 morrer;
 	}
 }
 

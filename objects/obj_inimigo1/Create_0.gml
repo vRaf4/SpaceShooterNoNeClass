@@ -16,5 +16,6 @@ _morrendo = function() {
 		_efeito_explosao(obj_explosao_inimigo);
 		_screen_shake(10);
 		_toca_som_sfx(sfx_explosao2);
+		global.pontos += 1;//Ganha 1 ponto quando matar o inimigo 1;
 	}		
 }

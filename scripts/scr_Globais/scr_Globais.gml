@@ -2,7 +2,7 @@
 global.debug = false;
 global.destino = rm_inicio;
 global.transicao = false;
-global.boss = false;
+global.pontos = 0;
 
 #endregion
 
