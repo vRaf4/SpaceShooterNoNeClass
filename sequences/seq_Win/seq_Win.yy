@@ -26,8 +26,8 @@
   },
   "name":"seq_Win",
   "parent":{
-    "name":"Win_Loose",
-    "path":"folders/Sequences/Win_Loose.yy",
+    "name":"Win_Lose",
+    "path":"folders/Sequences/Win_Lose.yy",
   },
   "playback":1,
   "playbackSpeed":60.0,

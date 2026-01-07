@@ -7,7 +7,7 @@ _inicia_efeito_shader();
 //Criando o alarme:
 alarm[0] = game_get_speed(gamespeed_fps) * 2;
 //Quantidade de pontos:
-pontos = 1;
+pontos = 30;
 
 _morrendo = function() {
 	_timer_efeito_shader(3);

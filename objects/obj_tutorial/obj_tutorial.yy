@@ -3,6 +3,7 @@
   "%Name":"obj_tutorial",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":27,"eventType":9,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_tutorial",
@@ -25,7 +26,11 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[],
+  "properties":[
+    {"$GMObjectProperty":"v2","%Name":"_sequencia","filters":[
+        "GMSequence",
+      ],"listItems":[],"multiselect":false,"name":"_sequencia","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"seq_Win","path":"sequences/seq_Win/seq_Win.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"seq_Win","varType":5,},
+  ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,

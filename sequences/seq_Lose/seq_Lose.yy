@@ -1,6 +1,6 @@
 {
   "$GMSequence":"v1",
-  "%Name":"seq_Loose",
+  "%Name":"seq_Lose",
   "autoRecord":true,
   "backdropHeight":512,
   "backdropImageOpacity":0.5,
@@ -24,10 +24,10 @@
     "resourceType":"KeyframeStore<MomentsEventKeyframe>",
     "resourceVersion":"2.0",
   },
-  "name":"seq_Loose",
+  "name":"seq_Lose",
   "parent":{
-    "name":"Win_Loose",
-    "path":"folders/Sequences/Win_Loose.yy",
+    "name":"Win_Lose",
+    "path":"folders/Sequences/Win_Lose.yy",
   },
   "playback":1,
   "playbackSpeed":60.0,

@@ -18,7 +18,7 @@ alarm[1] = game_get_speed(gamespeed_fps) * 6;
 
 //Método para trocar de level
 _ir_para_prox_level = function() {
-	if (_indice_ondas < 3){   
+	//if (global.level <= 1){   
 		_indice_ondas+= 1;
 		//Enquanto for menor que o array:
 		if(_indice_ondas <= array_length(_total_ondas) -1) {
@@ -26,12 +26,6 @@ _ir_para_prox_level = function() {
 			_pontos *= 2;//Dobra a quantidade de pontos;
 			global.level+=1;//Aumenta um level;
 		}
-	} else {
-		//Vai para tela de win:
-		global.destino = rm_win;
-		_criar_transicao_1();
-		global.transicao = true;
-		
-	}
+	//} 
 	show_debug_message(_indice_ondas);
 }

@@ -4,6 +4,14 @@ if(keyboard_check(vk_escape)){
 	//Avisando que está tendo transição:
 	global.transicao = true;
 }
-if (global.pontos >= _pontos) {
-	_ir_para_prox_level();
-} 
+if(global.level <= 1) {
+	if (global.pontos >= _pontos) {
+		_ir_para_prox_level();
+	} 
+} else {
+		//Vai para tela de win:
+		global.destino = rm_win;
+		_criar_transicao_1();
+		global.transicao = true;
+		
+	}
