@@ -16,6 +16,7 @@ timer_i = 0;
 
 //Quando o player for criado os pontos resetam:
 global.pontos = 0;
+global.level = 1;
 
 _inicia_efeito_mola();
 _inicia_efeito_shader();
