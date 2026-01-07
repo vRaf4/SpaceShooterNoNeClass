@@ -73,7 +73,9 @@
     {"id":{"name":"obj_tutorial","path":"objects/obj_tutorial/obj_tutorial.yy",},},
     {"id":{"name":"rm_inicio","path":"rooms/rm_inicio/rm_inicio.yy",},},
     {"id":{"name":"rm_jogo","path":"rooms/rm_jogo/rm_jogo.yy",},},
+    {"id":{"name":"rm_loose","path":"rooms/rm_loose/rm_loose.yy",},},
     {"id":{"name":"rm_tutorial","path":"rooms/rm_tutorial/rm_tutorial.yy",},},
+    {"id":{"name":"rm_win","path":"rooms/rm_win/rm_win.yy",},},
     {"id":{"name":"scr_Globais","path":"scripts/scr_Globais/scr_Globais.yy",},},
     {"id":{"name":"seq_onda1_inimigo2","path":"sequences/seq_onda1_inimigo2/seq_onda1_inimigo2.yy",},},
     {"id":{"name":"seq_onda1","path":"sequences/seq_onda1/seq_onda1.yy",},},
@@ -136,6 +138,8 @@
     {"roomId":{"name":"rm_jogo","path":"rooms/rm_jogo/rm_jogo.yy",},},
     {"roomId":{"name":"rm_inicio","path":"rooms/rm_inicio/rm_inicio.yy",},},
     {"roomId":{"name":"rm_tutorial","path":"rooms/rm_tutorial/rm_tutorial.yy",},},
+    {"roomId":{"name":"rm_win","path":"rooms/rm_win/rm_win.yy",},},
+    {"roomId":{"name":"rm_loose","path":"rooms/rm_loose/rm_loose.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

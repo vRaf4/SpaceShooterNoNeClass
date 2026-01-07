@@ -27,7 +27,11 @@ _ir_para_prox_level = function() {
 			global.level+=1;//Aumenta um level;
 		}
 	} else {
-		room_goto(rm_inicio);
+		//Vai para tela de win:
+		global.destino = rm_win;
+		_criar_transicao_1();
+		global.transicao = true;
+		
 	}
 	show_debug_message(_indice_ondas);
 }

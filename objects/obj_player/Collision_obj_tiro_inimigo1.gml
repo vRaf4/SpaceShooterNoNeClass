@@ -1,1 +1,1 @@
-//_perder_vida();
+_perder_vida();

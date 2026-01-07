@@ -6,7 +6,7 @@ timer_tiro = 0;
 
 level_tiro = 1;
 
-vidas = 5;
+vidas = 1;
 escudos = 3;
 
 meu_escudo = noone;
@@ -188,6 +188,7 @@ _perder_vida = function() {
 		_screen_shake(50);
 		_toca_som_sfx(sfx_explosion);
 		_toca_som_sfx(sfx_lose);//Som de perder;
+		global.destino = rm_loose;
 		_criar_transicao_1();
 		global.transicao = true;
 	}
