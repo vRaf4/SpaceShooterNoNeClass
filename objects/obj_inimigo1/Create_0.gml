@@ -6,6 +6,8 @@ _inicia_efeito_mola();
 _inicia_efeito_shader();
 //Criando o alarme:
 alarm[0] = game_get_speed(gamespeed_fps) * 2;
+//Quantidade de pontos:
+pontos = 1;
 
 _morrendo = function() {
 	_timer_efeito_shader(3);
@@ -16,6 +18,6 @@ _morrendo = function() {
 		_efeito_explosao(obj_explosao_inimigo);
 		_screen_shake(10);
 		_toca_som_sfx(sfx_explosao2);
-		global.pontos += 1;//Ganha 1 ponto quando matar o inimigo 1;
+		global.pontos += pontos;//Ganha 1 ponto quando matar o inimigo 1;
 	}		
 }

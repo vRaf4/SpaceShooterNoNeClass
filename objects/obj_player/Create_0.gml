@@ -14,6 +14,9 @@ meu_escudo = noone;
 tempo_invencivel = game_get_speed(gamespeed_fps);
 timer_i = 0;
 
+//Quando o player for criado os pontos resetam:
+global.pontos = 0;
+
 _inicia_efeito_mola();
 _inicia_efeito_shader();
 //Parando todos os sons:

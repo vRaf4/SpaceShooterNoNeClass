@@ -4,3 +4,5 @@ if(keyboard_check(vk_escape)){
 	//Avisando que está tendo transição:
 	global.transicao = true;
 }
+
+	

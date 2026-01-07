@@ -1,8 +1,8 @@
-//Criando a sequencia:
-layer_sequence_create("seq_Inimigos", 0 ,0, _ondas[_indice]);
 
 //Se for menor que o tamanho o aray:
-if (_indice < array_length(_ondas) - 1) {
+if (_indice < array_length(_ondas)) {
+	//Criando a sequencia:
+	layer_sequence_create("seq_Inimigos", 0 ,0, _ondas[_indice]);
 	//Quando tocar o alarme ele aumentar o indice;
 	_indice++;
 	//show_debug_message(_indice);
@@ -17,8 +17,7 @@ if (_indice < array_length(_ondas) - 1) {
 		_posX += 200;
 		_posY -= 50;
 	}
-	//Repete o alarme:
+	//Reiniciando a fase:
 	_indice = 0;
 	alarm[0] = 510;
-
 }

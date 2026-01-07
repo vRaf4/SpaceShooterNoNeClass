@@ -3,6 +3,7 @@ global.debug = false;
 global.destino = rm_inicio;
 global.transicao = false;
 global.pontos = 0;
+global.boss_vivo = false;
 
 #endregion
 

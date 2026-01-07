@@ -1,7 +1,7 @@
 //Overide: apaga o código do  objeto pai e vai poder reescrever um novo
 //código no objeto filho;
 
-vida = 8;
+vida = 10;
 //Variável para controlar o estado:
 estado = "chegando";
 
@@ -109,7 +109,6 @@ _maquina_de_estado = function() {
 			//Atividade: destruir quando sair da tela:
 			if(y < -32) {
 				instance_destroy();
-				show_debug_message("Destruiu");
 			}
 			break;
 	}

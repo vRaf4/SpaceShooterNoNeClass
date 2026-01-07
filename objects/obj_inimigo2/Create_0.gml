@@ -1,5 +1,8 @@
 //Usando o código do objeto pai:
 event_inherited();
+//Alterando a vida e os pontos:
+vida_inimigo = 5;
+pontos = 5;
 
 //Tiro do inimigo:
 _atirando = function() {
@@ -15,7 +18,3 @@ _atirando = function() {
 		_toca_som_sfx(sfx_laser1);
 	}
 }
-vida_inimigo = 5;
-
-if(vida_inimigo < 1.1 ) global.pontos += 5;
-show_debug_message(vida_inimigo)
