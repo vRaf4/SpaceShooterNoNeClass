@@ -7,3 +7,4 @@ if(keyboard_check(vk_escape)){
 if (global.pontos >= _pontos) {
 	_ir_para_prox_level();
 } 
+show_debug_message(_total_ondas[_indice_ondas]);
