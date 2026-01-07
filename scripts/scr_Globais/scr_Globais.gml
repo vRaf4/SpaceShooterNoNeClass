@@ -4,6 +4,7 @@ global.destino = rm_inicio;
 global.transicao = false;
 global.pontos = 0;
 global.boss_vivo = false;
+global.level = 1;
 
 #endregion
 

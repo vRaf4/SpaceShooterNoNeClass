@@ -14,5 +14,6 @@ if(!global.transicao) {
 	_desenhar_GUI(spr_escudo, escudos, _altura_tela - 45);
 	draw_set_font(fnt_tutorial_2);
 	draw_text(20, 20, "Pontos: " + string(global.pontos));
+	draw_text(20, 40, "Level: " + string(global.level));
 	draw_set_font(-1);
 }

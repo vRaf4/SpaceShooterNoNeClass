@@ -1,8 +1,7 @@
-
 //Se for menor que o tamanho o aray:
-if (_indice < array_length(_ondas)) {
+if (_indice < array_length(_onda_atual)) {
 	//Criando a sequencia:
-	layer_sequence_create("seq_Inimigos", 0 ,0, _ondas[_indice]);
+	layer_sequence_create("seq_Inimigos", 0 ,0, _onda_atual[_indice]);
 	//Quando tocar o alarme ele aumentar o indice;
 	_indice++;
 	//show_debug_message(_indice);

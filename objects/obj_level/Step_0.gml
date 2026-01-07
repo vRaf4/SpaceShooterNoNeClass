@@ -4,5 +4,6 @@ if(keyboard_check(vk_escape)){
 	//Avisando que está tendo transição:
 	global.transicao = true;
 }
-
-	
+if (global.pontos >= _pontos) {
+	_ir_para_prox_level();
+} 
