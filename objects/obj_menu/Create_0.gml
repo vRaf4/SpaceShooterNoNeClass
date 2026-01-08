@@ -3,7 +3,7 @@
 
 //Criando o array para as opções do menu:
 
-menu = ["JOGAR", "TUTORIAL", "LOJA", "SAIR"];
+menu = ["JOGAR", "TUTORIAL", "SAIR"];
 
 menu_atual = 0;
 
@@ -48,12 +48,7 @@ ativa_menu = function(){
 				global.destino = rm_tutorial;
 				global.transicao = true;//Transição acontecendo;
 			break;
-			case 2:
-				_criar_transicao_1();
-				global.destino = rm_loja;
-				global.transicao = true;//Transição acontecendo;
-			break;
-			case 3: //Fecha o jogo:
+			case 2: //Fecha o jogo:
 				game_end();
 			break;
 		}
