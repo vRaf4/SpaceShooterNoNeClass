@@ -111,11 +111,11 @@ global.level = 1;
 	function _fim_transicao(){
 		global.transicao = false;
 	}
-	
+	//Função para spawnar item:
 	function _spawn_item(_item = obj_item_pickUp){
-		var _chance = random(100);//Número de 0 a 100;
+		var _chance = irandom(100);//Número de 0 a 100;
 		//Se a chance for maior que 90, ele spawna:
-		if(_chance >= 0) {	
+		if(_chance >= 60) {	 //60% de chance;
 			//Criando o power up :
 			instance_create_layer(x, y, "Level", _item);
 		}

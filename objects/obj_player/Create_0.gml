@@ -6,8 +6,8 @@ timer_tiro = 0;
 
 level_tiro = 1;
 
-vidas = 1;
-escudos = 3;
+vidas = 3;
+escudos = 2;
 
 meu_escudo = noone;
 
