@@ -8,12 +8,16 @@ if (_indice < array_length(_onda_atual)) {
 	//Reiniciar o alarme e criar a próxima onda:
 	alarm[0] = 510;
 } else {
-	var _posX = 48;
-	var _posY = -48;	
+	var _metade_tela = 144;
+	var _tela_inteira = 288;
+	var _posX_1 = irandom_range(0, _metade_tela);
+	var _posx_2 = irandom_range(_metade_tela, _tela_inteira);
+	var _posY = -48;
+	var _posX = _posX_1;
 	//Vai criar dois inimigos 3;
 	repeat(2) {	
-		instance_create_layer(x + _posX, y + _posY, "Inimigos", obj_inimigo3);
-		_posX += 200;
+		instance_create_layer(_posX, y + _posY, "Inimigos", obj_inimigo3);
+		_posX = _posx_2;
 		_posY -= 50;
 	}
 	//Reiniciando a fase:
