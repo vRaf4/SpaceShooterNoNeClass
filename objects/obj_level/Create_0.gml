@@ -14,7 +14,7 @@ _pontos = 30;
 alarm[0] = 60;
 
 
-alarm[1] = game_get_speed(gamespeed_fps) * 6;
+alarm[1] = game_get_speed(gamespeed_fps) * 4;
 
 //Método para trocar de level
 _ir_para_prox_level = function() {
@@ -27,5 +27,4 @@ _ir_para_prox_level = function() {
 			global.level+=1;//Aumenta um level;
 		}
 	//} 
-	show_debug_message(_indice_ondas);
 }

@@ -17,6 +17,7 @@ timer_i = 0;
 //Quando o player for criado os pontos resetam:
 global.pontos = 0;
 global.level = 1;
+global.trocou_level_tiro = false;
 
 _inicia_efeito_mola();
 _inicia_efeito_shader();
@@ -137,17 +138,19 @@ _ganhar_level_tiro = function () {
 }
 //Método para trocar o level do tiro:
 _trocar_level_tiro = function() {
-	//Se ele apertar shift:
-	if (keyboard_check_pressed(vk_shift)) {
-		//E for menor ou igual a 3:
-		if(level_tiro < 3) {
-			level_tiro++;//Vai subir um level com no máximo 3 leveis;
-		}
-	} else if (keyboard_check_pressed(vk_control)) {//Se apertar control:
-		//E for maior que 0;
-		if (level_tiro > 1) {
-			//Ele diminui até no 1;
-			level_tiro--;
+	if(global.trocou_level_tiro){//se ele ja tiver trocar o tiro ele pode fazer o resto:
+		//Se ele apertar shift:
+		if (keyboard_check_pressed(vk_shift)) {
+			//E for menor ou igual a 3:
+			if(global.level_tiro < 3) {
+				global.level_tiro++;//Vai subir um level com no máximo 3 leveis;
+			}
+		} else if (keyboard_check_pressed(vk_control)) {//Se apertar control:
+			//E for maior que 0;
+			if (global.level_tiro > 1) {
+				//Ele diminui até no 1;
+				global.level_tiro--;
+			}
 		}
 	}
 }

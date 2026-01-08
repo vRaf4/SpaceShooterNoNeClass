@@ -7,6 +7,7 @@ global.boss_vivo = false;
 global.level = 1;
 global.moedas = 0;
 global.level_tiro = 1;
+global.trocou_level_tiro = false;
 
 #endregion
 
@@ -117,7 +118,7 @@ global.level_tiro = 1;
 	function _spawn_item(_item = obj_item_pickUp){
 		var _chance = irandom(100);//Número de 0 a 100;
 		//Se a chance for maior que 90, ele spawna:
-		if(_chance >= 60) {	 //60% de chance;
+		if(_chance >= 65) {	 //65% de chance;
 			//Criando o power up :
 			instance_create_layer(x, y, "Level", _item);
 		}

@@ -7,7 +7,7 @@ if (keyboard_check_released(vk_tab)) {
 	global.debug = !global.debug;
 }
 //Executando o método para trocar o level do tiro:
-_trocar_level_tiro();
+//_trocar_level_tiro();
 
 //Executando o método para perder vida:
 //_perder_vida();

@@ -12,9 +12,11 @@ if(!global.transicao) {
 	//Desenhando a GUI:
 	_desenhar_GUI(spr_vida, vidas, _altura_tela - 20);
 	_desenhar_GUI(spr_escudo, escudos, _altura_tela - 45);
+	draw_set_alpha(.6);//Tranparencia;
 	draw_set_font(fnt_tutorial_2);
 	draw_text(20, 20, "Pontos: " + string(global.pontos));
 	draw_text(20, 40, "Level: " + string(global.level));
-	//draw_text(20, 60, "Moedas: " + string(global.moedas));
+	//Resetando valores do draw:
+	draw_set_alpha(1);
 	draw_set_font(-1);
 }
