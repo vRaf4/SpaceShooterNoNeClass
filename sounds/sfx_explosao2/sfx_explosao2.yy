@@ -22,5 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"sfx_explosao2.wav",
-  "volume":0.4,
+  "volume":0.2,
 }

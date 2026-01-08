@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":228.10123,
+  "duration":92.969795,
   "exportDir":"",
   "name":"snd_fundo_inicio",
   "parent":{
@@ -22,5 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"snd_fundo_inicio.mp3",
-  "volume":0.8,
+  "volume":0.15,
 }

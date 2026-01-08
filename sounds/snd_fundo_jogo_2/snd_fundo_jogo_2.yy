@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":155.68979,
+  "duration":174.60245,
   "exportDir":"",
   "name":"snd_fundo_jogo_2",
   "parent":{
@@ -22,5 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"snd_fundo_jogo_2.mp3",
-  "volume":0.7,
+  "volume":0.15,
 }

@@ -93,11 +93,11 @@ global.trocou_level_tiro = false;
 		}
 	}
 	
-	function _toca_som_sfx(_som,) {
+	function _toca_som_sfx(_som, _loop = 0) {
 		//Parando o som para não criar varias instancias:
 		audio_stop_sound(_som);
 		var _pitch = random_range(.7, 1.2);
-		audio_play_sound(_som, 0, 0, , , _pitch);
+		audio_play_sound(_som, 0, _loop, , , _pitch);
 	}
 	
 	function _criar_transicao_1() {

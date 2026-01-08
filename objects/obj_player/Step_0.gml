@@ -2,10 +2,10 @@
 controla_player();
 
 //Se clicar no tab:
-if (keyboard_check_released(vk_tab)) {
-	//Inverte o valor de debug;
-	global.debug = !global.debug;
-}
+//if (keyboard_check_released(vk_tab)) {
+//	//Inverte o valor de debug;
+//	global.debug = !global.debug;
+//}
 //Executando o método para trocar o level do tiro:
 //_trocar_level_tiro();
 
