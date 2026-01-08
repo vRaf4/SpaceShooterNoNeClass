@@ -4,7 +4,7 @@ vel_player = 2;//Velocidade do player;
 espera_tiro = 8;
 timer_tiro = 0;
 
-level_tiro = 1;
+global.level_tiro = 1;
 
 vidas = 3;
 escudos = 2;
@@ -68,15 +68,15 @@ controla_player = function (){
 		//Mudando a escala quando atirar:
 		_efeito_mola(1.3, 1.5);
 		//Executando o método do tiro:
-		if(level_tiro == 1) {//Se level for 1:
+		if(global.level_tiro == 1) {//Se level for 1:
 			//Vai executar o tiro 1;
 			_tiro_1();
 			timer_tiro = espera_tiro;
-		} else if(level_tiro == 2) {//Se for 2:
+		} else if(global.level_tiro == 2) {//Se for 2:
 			_tiro_2();//Executa o tiro 2;
 			timer_tiro = espera_tiro * 1.3;//Mas aumenta um pouco o 
 			//tempo de espera;
-		} else if(level_tiro == 3) {
+		} else if(global.level_tiro == 3) {
 			_tiro_3();
 			timer_tiro = espera_tiro * 1.6;
 		}

@@ -15,5 +15,6 @@ if(!global.transicao) {
 	draw_set_font(fnt_tutorial_2);
 	draw_text(20, 20, "Pontos: " + string(global.pontos));
 	draw_text(20, 40, "Level: " + string(global.level));
+	draw_text(20, 60, "Moedas: " + string(global.moedas));
 	draw_set_font(-1);
 }
