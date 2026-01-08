@@ -1,7 +1,13 @@
 {
   "$GMObject":"",
   "%Name":"obj_itens",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":10,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":11,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":7,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"obj_itens",
   "overriddenProperties":[],
@@ -23,11 +29,20 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[],
+  "properties":[
+    {"$GMObjectProperty":"v2","%Name":"_sprite_item","filters":[
+        "GMSprite",
+      ],"listItems":[],"multiselect":false,"name":"_sprite_item","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"spr_powerUp_5","path":"sprites/spr_powerUp_5/spr_powerUp_5.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"spr_powerUp_5","varType":5,},
+    {"$GMObjectProperty":"v2","%Name":"_custo","filters":[],"listItems":[],"multiselect":false,"name":"_custo","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"10","varType":1,},
+    {"$GMObjectProperty":"v2","%Name":"_texto","filters":[],"listItems":[],"multiselect":false,"name":"_texto","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"Tiro Duplo","varType":2,},
+  ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_powerUp_5",
+    "path":"sprites/spr_powerUp_5/spr_powerUp_5.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

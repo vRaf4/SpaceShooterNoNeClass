@@ -48,6 +48,7 @@
   },
   "name":"SpaceShooterNoNeClass",
   "resources":[
+    {"id":{"name":"fnt_loja","path":"fonts/fnt_loja/fnt_loja.yy",},},
     {"id":{"name":"fnt_Menu_1","path":"fonts/fnt_Menu_1/fnt_Menu_1.yy",},},
     {"id":{"name":"fnt_Menu_2","path":"fonts/fnt_Menu_2/fnt_Menu_2.yy",},},
     {"id":{"name":"fnt_Menu_3","path":"fonts/fnt_Menu_3/fnt_Menu_3.yy",},},
